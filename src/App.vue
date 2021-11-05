@@ -1,23 +1,30 @@
 <template>
     <div class="h-screen mx-auto bg-pink-50 textured grid place-items-center">
-        <div class="bg-purple-200 mt-auto mb-auto px-10 pt-10 pb-5 border-4 xl:w-1/3 lg:w-1/2 md:w-4/5 sm:w-5/6 border-purple-400">
-            <h1 class="font-serif text-purple-500 text-6xl">
+        <div class="bg-purple-200 mt-auto mb-auto px-10 pt-10 pb-5 border-4 xl:w-2/5 lg:w-1/2 md:w-4/5 sm:w-5/6 border-purple-400">
+            <h1 class="font-serif text-purple-600 text-6xl">
                 tadhg boyle
             </h1>
-            <h5 class="font-mono text-purple-400 text-2xl pt-3 pb-5">
+            <h5 class="font-mono text-purple-500 text-2xl pt-3 pb-5">
                 web developer
                 <br>
                 software engineer
             </h5>
-            <div class="font-serif text-purple-400 pb-5 space-y-2">
+            <div class="font-serif text-purple-500 pb-5 space-y-4">
                 <p>
-                    <span class="text-xl pr-2">👋</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <span class="text-xl pr-2">👋</span>hey! i'm tadhg boyle, a CS student at BCIT & developer based in vancouver.
                 </p>
                 <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    idk something here
                 </p>
                 <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    i offer full stack web and java development services.
+                </p>
+                <p>
+                    interested? let's chat!
+                    <br>
+                    discord: <span class="font-bold">aberdeener#0001</span>
+                    <br>
+                    email: <span class="font-bold">me@tadhg.sh</span>
                 </p>
             </div>
             <div class="text-pink-400 flex justify-center gap-x-6">
