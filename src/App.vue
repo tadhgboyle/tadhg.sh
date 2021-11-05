@@ -20,7 +20,7 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
             </div>
-            <div class="text-center text-pink-400 space-x-8">
+            <div class="text-pink-400 flex justify-center gap-x-6">
                 <a href="https://github.com/Aberdeener" target="_blank">🖥️ <span class="hover:underline">github</span></a>
                 <a href="https://www.linkedin.com/in/tadhg-boyle/" target="_blank">💭 <span class="hover:underline">linkedin</span></a>
                 <a href="https://twitter.com/Aberd33n3r" target="_blank">🐦 <span class="hover:underline">twitter</span></a>
