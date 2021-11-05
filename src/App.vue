@@ -11,7 +11,7 @@
             </h5>
             <div class="font-serif text-purple-500 pb-5 space-y-4">
                 <p>
-                    <span class="text-xl pr-2">👋</span>hey! i'm tadhg boyle, a CS student at BCIT & developer based in vancouver.
+                    <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a CS student at BCIT & developer based in vancouver.
                 </p>
                 <p>
                     idk something here
@@ -22,9 +22,9 @@
                 <p>
                     interested? let's chat!
                     <br>
-                    discord: <span class="font-bold">aberdeener#0001</span>
+                    discord: <a href="https://discord.com/users/271510274475819008"><span class="font-bold">aberdeener#0001</span></a>
                     <br>
-                    email: <span class="font-bold">me@tadhg.sh</span>
+                    email: <a :href="'mailto:' + email"><span class="font-bold">{{ email }}</span></a>
                 </p>
             </div>
             <div class="text-pink-400 flex justify-center gap-x-6">
@@ -35,6 +35,19 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            email: 'meATghdatDOTsh'
+                    .replace('AT', '@')
+                    .replace('ghdat', 'tadhg')
+                    .replace('DOT', '.')
+        }
+    }
+}
+</script>
 
 <style>
 .textured {
