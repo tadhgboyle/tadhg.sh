@@ -1,6 +1,7 @@
 <template>
     <div class="h-screen mx-auto bg-pink-50 textured grid place-items-center">
-        <div class="bg-purple-200 mt-auto mb-auto px-10 pt-10 pb-5 border-4 xl:w-2/5 lg:w-1/2 md:w-4/5 sm:w-5/6 border-purple-400">
+        <div class="bg-purple-200 mt-auto mb-auto px-10 pt-10 pb-5 border-4 max-w-2xl border-purple-400">
+            <img :src="me" alt="Me!" class="max-h-32 float-right">
             <h1 class="font-serif text-purple-600 text-6xl">
                 tadhg boyle
             </h1>
@@ -14,7 +15,7 @@
                     <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a CS student at BCIT & developer based in vancouver.
                 </p>
                 <p>
-                    idk something here
+                    for the last 5 years i've been developing my skills as a programmer by working on many open source projects and pairing with clients to create awesome products.
                 </p>
                 <p>
                     i offer full stack web and java development services.
@@ -37,13 +38,16 @@
 </template>
 
 <script>
+import me from '/me.png';
+
 export default {
     data() {
         return {
             email: 'meATghdatDOTsh'
                     .replace('AT', '@')
                     .replace('ghdat', 'tadhg')
-                    .replace('DOT', '.')
+                    .replace('DOT', '.'),
+            me: me,
         }
     }
 }
