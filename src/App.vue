@@ -1,10 +1,9 @@
 <template>
     <div class="h-screen mx-auto bg-pink-50 textured grid place-items-center">
         <div class="bg-purple-200 mt-auto mb-auto px-10 pt-10 pb-5 border-4 max-w-2xl border-purple-400">
-            <h1 class="font-serif text-purple-600 text-6xl inline-block">
-                tadhg boyle
+            <h1 class="font-serif text-purple-600 text-6xl">
+                tadhg boyle <img :src="me" alt="Me!" class="max-h-32 float-right inline">
             </h1>
-            <img :src="me" alt="Me!" class="max-h-32 float-right">
             <h5 class="font-mono text-purple-500 text-2xl pt-3 pb-5">
                 web developer
                 <br>
