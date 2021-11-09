@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import me from '/me.png';
+import me from '/DSC02819.jpg';
 
 export default {
     data() {
