@@ -5,8 +5,6 @@
                 tadhg boyle <img :src="me" alt="Me!" class="max-h-32 float-right inline">
             </h1>
             <h5 class="font-mono text-blue-500 text-2xl pt-3 pb-5">
-                web developer
-                <br>
                 software engineer
             </h5>
             <div class="font-serif text-blue-500 pb-5 space-y-4">
