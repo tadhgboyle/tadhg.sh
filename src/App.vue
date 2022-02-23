@@ -22,9 +22,7 @@
                     <br>
                     email: <a :href="'mailto:' + email"><span class="font-bold">{{ email }}</span></a>
                 </p>
-                <p>
-                  {{ nowPlaying }}
-                </p>
+                <p v-html="nowPlaying"></p>
             </div>
             <div class="text-purple-500 flex justify-center gap-x-6">
                 <a href="https://github.com/Aberdeener" target="_blank">🖥️ <span class="hover:underline">github</span></a>
@@ -67,27 +65,31 @@ export default {
             const data = convertXML.convertXML(response.data);
             const latestTrack = data.lfm.children[0].recenttracks.children[0].track;
 
-            let nowPlaying = false;
-            let time = '';
+            let text = '🎶 ';
+            const nowPlaying = latestTrack.nowplaying;
 
-            if (latestTrack.nowplaying) {
-                nowPlaying = true;
-            } else {
-                const date = new Date(0);
-                date.setUTCSeconds(latestTrack.children[10].date.uts)
-                time = date.toLocaleTimeString([], {
-                    hour: '2-digit',
-                    minute:'2-digit'
-                });
+            if (nowPlaying) {
+                text += 'now playing: ';
             }
 
             const artist = latestTrack.children[0].artist.content.toLowerCase();
-
-            // todo: link to spotify?
             const title = he.unescape(latestTrack.children[1].name.content).toLowerCase();
+            const url = latestTrack.children[5].url.content;
 
-            // cursed
-            this.nowPlaying = `🎶 ${nowPlaying ? 'now playing: ' : ''} ${artist} - ${title} ${!nowPlaying ? `@ ${time}` : ''}`;
+            text += `<a class="hover:underline" target="_blank" href="${url}"><i>${artist} - ${title}</i></a> `;
+
+            if (!nowPlaying) {
+                const date = new Date(0);
+                date.setUTCSeconds(latestTrack.children[10].date.uts)
+                const time = date.toLocaleTimeString([], {
+                    hour: 'numeric',
+                    minute:'2-digit'
+                }).slice(0, -1);
+
+                text += `@ ${time}`;
+            }
+
+            this.nowPlaying = text;
         }
     }
 }
