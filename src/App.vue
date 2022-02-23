@@ -15,10 +15,10 @@
                     for the last 5 years i've been developing my skills as a programmer by working on many open source projects and pairing with clients to create awesome products.
                 </p>
                 <p>
-                    i offer full stack web and java development services.
+                    i'm currently interning at Shopify as a backend software developer, where i'm working on merchant services team.
                 </p>
                 <p>
-                    interested? let's chat!
+                    say hello:
                     <br>
                     discord: <a href="https://discord.com/users/271510274475819008"><span class="font-bold">aberdeener#0001</span></a>
                     <br>
