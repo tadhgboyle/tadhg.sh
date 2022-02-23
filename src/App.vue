@@ -22,6 +22,9 @@
                     <br>
                     email: <a :href="'mailto:' + email"><span class="font-bold">{{ email }}</span></a>
                 </p>
+                <p>
+                  {{ nowPlaying }}
+                </p>
             </div>
             <div class="text-purple-500 flex justify-center gap-x-6">
                 <a href="https://github.com/Aberdeener" target="_blank">🖥️ <span class="hover:underline">github</span></a>
@@ -34,8 +37,17 @@
 
 <script>
 import me from '/DSC02819.jpg';
+import axios from 'axios';
+import convertXML from 'simple-xml-to-json';
+import he from 'he';
 
 export default {
+    mounted() {
+      this.getLatestSong();
+      setInterval(() => {
+          this.getLatestSong();
+        }, 4000);
+    },
     data() {
         return {
             email: 'meATghdatDOTsh'
@@ -43,6 +55,37 @@ export default {
                     .replace('ghdat', 'tadhg')
                     .replace('DOT', '.'),
             me: me,
+            nowPlaying: null
+        }
+    },
+    methods: {
+        async getLatestSong() {
+            const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=tadhg-boyle&limit=1&api_key=2866efed3e2acc2afee1a8cc82077046', {
+                responseType: 'text',
+            });
+
+            const data = convertXML.convertXML(response.data);
+            const latestTrack = data.lfm.children[0].recenttracks.children[0].track;
+
+            let nowPlaying = false;
+            let time = '';
+
+            if (latestTrack.nowplaying) {
+                nowPlaying = true;
+            } else {
+                const date = new Date(0);
+                date.setUTCSeconds(latestTrack.children[10].date.uts)
+                time = date.toLocaleTimeString([], {
+                    hour: '2-digit',
+                    minute:'2-digit'
+                });
+            }
+
+            const artist = latestTrack.children[0].artist.content;
+            const title = he.unescape(latestTrack.children[1].name.content);
+
+            // cursed
+            this.nowPlaying = `🎶 ${nowPlaying ? 'Now playing: ' : ''} ${artist} - ${title} ${!nowPlaying ? `@ ${time}` : ''}`;
         }
     }
 }
