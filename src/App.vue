@@ -81,11 +81,13 @@ export default {
                 });
             }
 
-            const artist = latestTrack.children[0].artist.content;
-            const title = he.unescape(latestTrack.children[1].name.content);
+            const artist = latestTrack.children[0].artist.content.toLowerCase();
+
+            // todo: link to spotify?
+            const title = he.unescape(latestTrack.children[1].name.content).toLowerCase();
 
             // cursed
-            this.nowPlaying = `🎶 ${nowPlaying ? 'Now playing: ' : ''} ${artist} - ${title} ${!nowPlaying ? `@ ${time}` : ''}`;
+            this.nowPlaying = `🎶 ${nowPlaying ? 'now playing: ' : ''} ${artist} - ${title} ${!nowPlaying ? `@ ${time}` : ''}`;
         }
     }
 }
