@@ -43,9 +43,9 @@ import he from 'he';
 
 export default {
     mounted() {
-      this.getLatestSong();
-      setInterval(() => {
-          this.getLatestSong();
+        this.getLatestSong();
+        setInterval(() => {
+            this.getLatestSong();
         }, 4000);
     },
     data() {
