@@ -69,7 +69,9 @@ export default {
             const nowPlaying = latestTrack.nowplaying;
 
             if (nowPlaying) {
-                text += 'now playing: ';
+                text += "i'm currently listening to: ";
+            } else {
+                text += "i last listened to: ";
             }
 
             const artist = latestTrack.children[0].artist.content.toLowerCase();
