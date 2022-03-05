@@ -88,6 +88,15 @@ export default {
                     minute:'2-digit'
                 }).slice(0, -1);
 
+                const yesterday = new Date();
+                yesterday.setDate(yesterday.getDate() - 1);
+                if (new Date().toLocaleDateString() !== date.toLocaleDateString()) {
+                    if (date.toLocaleDateString() === yesterday.toLocaleDateString()) {
+                        text += `yesterday `;
+                    } else {
+                        text += `a while ago `;
+                    }
+                }
                 text += `@ ${time}`;
             }
 
