@@ -80,6 +80,7 @@ export default {
 
             text += `<a class="hover:underline" target="_blank" href="${url}"><i>${artist} - ${title}</i></a> `;
 
+            let showTime = true;
             if (!nowPlaying) {
                 const date = new Date(0);
                 date.setUTCSeconds(latestTrack.children[10].date.uts)
@@ -94,10 +95,13 @@ export default {
                     if (date.toLocaleDateString() === yesterday.toLocaleDateString()) {
                         text += `yesterday `;
                     } else {
+                        showTime = false;
                         text += `a while ago `;
                     }
                 }
-                text += `@ ${time}`;
+                if (showTime) {
+                    text += `@ ${time}`;
+                }
             }
 
             this.nowPlaying = text;
