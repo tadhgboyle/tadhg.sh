@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen mx-auto bg-pink-50 textured grid place-items-center">
+    <div class="h-screen mx-auto bg-pink-50 grid place-items-center" :class="this.backgroundClass">
         <div class="bg-blue-200 mt-auto mb-auto px-10 pt-10 pb-5 border-4 max-w-2xl border-blue-400">
             <h1 class="font-serif text-blue-600 text-6xl">
                 tadhg boyle <img :src="me" alt="Me!" class="max-h-32 float-right inline">
@@ -33,6 +33,16 @@
     </div>
 </template>
 
+<style>
+.background-textured {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23BFDBFE' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.background-bentley {
+    background-image: url("https://bentley.tadhg.sh/-2.gif");
+}
+</style>
+
 <script>
 import me from '/DSC02819.jpg';
 import axios from 'axios';
@@ -55,6 +65,16 @@ export default {
             me: me,
             nowPlaying: null
         }
+    },
+    computed: {
+        backgroundClass() {
+            const date = new Date();
+            if (date.getMonth() === 11 && date.getDate() === 23) {
+                console.log('🐱 Happy Birthday, Bentley!');
+                return 'background-bentley';
+            }
+            return 'background-textured';
+        },
     },
     methods: {
         async getLatestSong() {
@@ -110,8 +130,3 @@ export default {
 }
 </script>
 
-<style>
-.textured {
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23BFDBFE' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-}
-</style>
