@@ -9,7 +9,7 @@
             </h5>
             <div class="font-serif text-blue-500 pb-5 space-y-4">
                 <p>
-                    <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a CS student at BCIT & developer based in vancouver.
+                    <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a CS student at BCIT & developer based in edmonton.
                 </p>
                 <p>
                     for the last 5 years i've been developing my skills as a programmer by working on many open source projects and pairing with clients to create awesome products.
