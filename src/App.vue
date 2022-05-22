@@ -104,10 +104,14 @@ export default {
             if (!nowPlaying) {
                 const date = new Date(0);
                 date.setUTCSeconds(latestTrack.children[10].date.uts)
-                const time = date.toLocaleTimeString([], {
+                let time = date.toLocaleTimeString([], {
                     hour: 'numeric',
                     minute:'2-digit'
-                }).slice(0, -1);
+                });
+                // some locale date time strings don't end with a period
+                if (time.endsWith('.')) {
+                    time = time.slice(0, -1);
+                }
 
                 const yesterday = new Date();
                 yesterday.setDate(yesterday.getDate() - 1);
