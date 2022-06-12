@@ -2,12 +2,9 @@
     <div class="h-screen mx-auto bg-pink-50 grid place-items-center" :class="this.backgroundClass">
         <div class="bg-blue-200 mt-auto mb-auto px-10 pt-10 pb-5 border-4 max-w-2xl border-blue-400">
             <h1 class="font-serif text-blue-600 text-6xl">
-                tadhg boyle <img :src="me" alt="Me!" class="max-h-32 float-right inline">
+                tadhg boyle
             </h1>
-            <h5 class="font-mono text-blue-500 text-2xl pt-3 pb-5">
-                software developer
-            </h5>
-            <div class="font-serif text-blue-500 pb-5 space-y-4">
+            <div class="font-serif text-blue-500 pb-5 space-y-4 pt-4">
                 <p>
                     <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a CS student at BCIT & developer based in edmonton.
                 </p>
@@ -44,7 +41,6 @@
 </style>
 
 <script>
-import me from '/DSC02819.jpg';
 import axios from 'axios';
 import convertXML from 'simple-xml-to-json';
 import he from 'he';
@@ -62,7 +58,6 @@ export default {
                     .replace('AT', '@')
                     .replace('ghdat', 'tadhg')
                     .replace('DOT', '.'),
-            me: me,
             nowPlaying: null
         }
     },
