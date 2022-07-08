@@ -6,18 +6,18 @@
             </h1>
             <div class="font-serif text-blue-500 pb-5 space-y-4 pt-4">
                 <p>
-                    <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a CS student at BCIT & developer based in edmonton.
+                    <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a CS student & software developer based in edmonton.
                 </p>
                 <p>
                     for the last 5 years i've been developing my skills as a programmer by working on many open source projects and pairing with clients to create awesome products.
                 </p>
                 <p>
-                    i'm currently interning at Shopify as a backend software developer, where i'm working on the merchant services team.
+                    i'm currently interning at Shopify as a backend software developer, where i'm working on the merchant services billing team.
                 </p>
                 <p>
                     discord: <a href="https://discord.com/users/271510274475819008"><span class="font-bold">aberdeener#0001</span></a>
                     <br>
-                    email: <a :href="'mailto:' + email"><span class="font-bold">{{ email }}</span></a>
+                    email: <a href="mailto:me@tadhg.sh"><span class="font-bold">me@tadhg.sh</span></a>
                 </p>
                 <p v-html="nowPlaying"></p>
             </div>
@@ -51,15 +51,6 @@ export default {
         setInterval(() => {
             this.getLatestSong();
         }, 4000);
-    },
-    data() {
-        return {
-            email: 'meATghdatDOTsh'
-                    .replace('AT', '@')
-                    .replace('ghdat', 'tadhg')
-                    .replace('DOT', '.'),
-            nowPlaying: null
-        }
     },
     computed: {
         backgroundClass() {
