@@ -62,6 +62,11 @@ export default {
             return 'background-textured';
         },
     },
+    data() {
+        return {
+            nowPlaying: null
+        }
+    },
     methods: {
         async getLatestSong() {
             const response = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=tadhg-boyle&limit=1&api_key=2866efed3e2acc2afee1a8cc82077046', {
