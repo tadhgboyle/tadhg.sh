@@ -36,7 +36,7 @@
 }
 
 .background-bentley {
-    background-image: url("https://bentley.tadhg.sh/-2.gif");
+    background-image: url("https://bentley.pictures/-2.gif");
 }
 </style>
 
