@@ -36,7 +36,7 @@
 }
 
 .background-bentley {
-    background-image: url("https://bentley.tadhg.sh/-2.gif");
+    background-image: url("https://bentley.pictures/-2.gif");
 }
 </style>
 
@@ -55,7 +55,7 @@ export default {
     computed: {
         backgroundClass() {
             const date = new Date();
-            if (date.getMonth() === 11 && date.getDate() === 23) {
+            if (date.getMonth() === 12 && date.getDate() === 21) {
                 console.log('🐱 Happy Birthday, Bentley!');
                 return 'background-bentley';
             }
