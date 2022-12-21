@@ -55,7 +55,7 @@ export default {
     computed: {
         backgroundClass() {
             const date = new Date();
-            if (date.getMonth() === 12 && date.getDate() === 21) {
+            if ((date.getMonth()+1) === 12 && date.getDate() === 21) {
                 console.log('🐱 Happy Birthday, Bentley!');
                 return 'background-bentley';
             }
