@@ -12,7 +12,7 @@
                     for the last 5 years i've been developing my skills as a programmer by working on many open source projects and pairing with clients to create awesome products.
                 </p>
                 <p>
-                    i'm currently interning at Shopify as a backend software developer, where i'm working on the merchant billing team.
+                    after a fantastic internship at <a href="https://shopify.com">Shopify</a>, i'm currently on the hunt for full-time position in a development role.
                 </p>
                 <p>
                     discord: <a href="https://discord.com/users/271510274475819008"><span class="font-bold">aberdeener#0001</span></a>
