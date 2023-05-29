@@ -9,9 +9,6 @@
                     <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a CS student & software developer based in edmonton.
                 </p>
                 <p>
-                    for the last 5 years i've been developing my skills as a programmer by working on many open source projects and pairing with clients to create awesome products.
-                </p>
-                <p>
                     discord: <a href="https://discord.com/users/271510274475819008"><span class="font-bold">aberdeener#0001</span></a>
                     <br>
                     email: <a href="mailto:me@tadhg.sh"><span class="font-bold">me@tadhg.sh</span></a>
