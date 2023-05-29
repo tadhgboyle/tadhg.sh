@@ -6,7 +6,7 @@
             </h1>
             <div class="font-serif text-blue-500 pb-5 space-y-4 pt-4">
                 <p>
-                    <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a CS student & software developer based in edmonton.
+                    <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a software developer based in edmonton.
                 </p>
                 <p>
                     discord: <a href="https://discord.com/users/271510274475819008"><span class="font-bold">aberdeener#0001</span></a>
