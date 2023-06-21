@@ -9,7 +9,7 @@
                     <span class="text-xl pr-2">👋</span>hey! i'm tadhg, a software developer based in edmonton.
                 </p>
                 <p>
-                    discord: <a href="https://discord.com/users/271510274475819008"><span class="font-bold">aberdeener#0001</span></a>
+                    discord: <a href="https://discord.com/users/271510274475819008"><span class="font-bold">aberdeener</span></a>
                     <br>
                     email: <a href="mailto:me@tadhg.sh"><span class="font-bold">me@tadhg.sh</span></a>
                 </p>
